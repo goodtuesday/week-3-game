@@ -4,33 +4,41 @@
 
 
 
-h1{
+body{
 
-	text-align:center;
+ background-image: url("jQx2YXP.png");
+
 }
 
+
+ header{
+
+	text-align:center;
+	font-family: 'Architects Daughter', cursive;
+	color:white;
+}
+
+img{
+margin:auto;
+
+}
 
 #message{
 
 text-align:center;
-padding-top: 10%;
+padding-top: 30px;
+font-family: 'Architects Daughter', cursive;
+color:white;
 
 }
 
 
 #guess{
 	text-align: center;
+
 }
 
 #game{
 	text-align: center;
 }
 
-#guessthing{
-	padding-top: 20px;
-}
-
-#button{
-
-	padding-top: 20px;
-}
