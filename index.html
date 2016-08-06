@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet"  type="text/css"  href="assets/css/style.css">
+
+        <title> The Psychic Game</title>
+    </head>
+    <body>
+<div class="container-fluid">
+    <header>
+    <h1>Welcome to The Psychic Game</h1> <br>
+    <h3>I'm thinking of a letter of the alphabet.  Press a letter on the keyboard and guess which one.  You have 6 guesses!<h3>
+</header>
+
+
+<div class="row">
+
+<div class="col-md-4 ">
+</div>
+
+
+<div  class="col-md-4" id="game"> 
+
+<div id=guessthing>
+
+</div>
+
+</div>
+
+<p id="message"></p> <br>
+<p id=guessesUsed> </p>
+
+
+
+</div>
+
+
+
+<div class="col-md-4">
+</div>
+
+</div>
+</div>
+
+
+<script>
+var guessCount = 0;
+var maxGuess=6;
+var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm','n', 'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+
+
+
+document.onkeyup = function(psychic) {
+var randomLetter = letters[Math.floor(Math.random() * letters.length)];
+
+
+var guess = String.fromCharCode(event.keyCode).toLowerCase();
+
+
+
+
+  if (guess == randomLetter){
+    document.getElementById("message").innerHTML= "You got it! It was " +guess;
+
+  
+
+
+  } else if (guess !== randomLetter){
+    document.getElementById("message").innerHTML= "Nope! It's not " +guess;
+ 
+  }
+
+  guessCount += 1;
+
+  if (guessCount >= maxGuess) {
+    document.getElementById("message").innerHTML= "Sorry, you ran out of guesses.  The letter was " + randomLetter;
+ 
+  }
+  
+
+}    
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+    </body>
+</html>
